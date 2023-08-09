@@ -1,0 +1,20 @@
+
+# כדי להפעיל את הסביבה
+conda activate nerfstudio
+
+# מארגן את הדאטא ומכניס אותו לתקייה
+# colmap צריך להיות בתוך התקייה של ה
+ns-process-data images --data "C:\Users\MixedRealityLab\nerfstudio\data\set3\images" --output-dir "C:\Users\MixedRealityLab\nerfstudio\data\set3\processed"
+
+# outputs-מאמן את המודל ושומר אותו ב
+ns-train nerfacto --data data\all\processed --pipeline.datamanager.images-on-gpu True
+
+ns-train instant-ngp --data data\set_3\processed --pipeline.datamanager.images-on-gpu True
+
+# כדי להמשיך אימון אם עצרנו באמצע
+ns-train nerfacto --data data\all\processed --load-dir outputs\processed\nerfacto\<what you whant to continue>\nerfstudio_models
+
+# לטעון את המודל בלי לאמן
+ns-viewer --load-config {outputs/.../config.yml}
+# דוגמה
+ns-viewer --load-config outputs\processed\nerfacto\2023-08-07_170731\config.yml
