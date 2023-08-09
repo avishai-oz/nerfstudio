@@ -18,3 +18,19 @@ ns-train nerfacto --data data\all\processed --load-dir outputs\processed\nerfact
 ns-viewer --load-config {outputs/.../config.yml}
 # דוגמה
 ns-viewer --load-config outputs\processed\nerfacto\2023-08-07_170731\config.yml
+
+
+
+
+ns-process-data images --data "C:\Users\MixedRealityLab\nerfstudio\data\try\vid" --output-dir "C:\Users\MixedRealityLab\nerfstudio\data\try\processed"
+ns-train nerfacto --data data\try\processed --pipeline.datamanager.images-on-gpu True
+
+ns-viewer --load-config outputs\processed\nerfacto\2023-08-08_212251config.yml
+
+
+
+ns-train nerfstudio-template --data data\all\processed --pipeline.datamanager.images-on-gpu True
+set HOME=C:\Users\MixedRealityLab\nerfstudio
+
+
+    
