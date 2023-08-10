@@ -40,6 +40,7 @@ class TemplateDataManager(VanillaDataManager):
         )
 
     def next_train(self, step: int) -> Tuple[RayBundle, Dict]:
+        print(self.train_count)
         """Returns the next batch of data from the train dataloader."""
         self.train_count += 1
         image_batch = next(self.iter_train_image_dataloader)

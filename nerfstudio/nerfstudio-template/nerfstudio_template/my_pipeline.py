@@ -19,9 +19,9 @@ from nerfstudio.data.datamanagers.base_datamanager import (
     DataManagerConfig,
 )
 
-from nerfstudio_template.template_datamanager import TemplateDataManagerConfig
-from nerfstudio_template.template_model import TemplateModel, TemplateModelConfig
-
+from nerfstudio_template.my_datamanager import TemplateDataManagerConfig
+from nerfstudio_template.my_model import TemplateModel, TemplateModelConfig
+   
 
 @dataclass
 class TemplatePipelineConfig(VanillaPipelineConfig):

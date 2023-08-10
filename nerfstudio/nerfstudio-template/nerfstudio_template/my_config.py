@@ -4,11 +4,11 @@ Define your custom method here that registers with Nerfstudio CLI."""
 
 from __future__ import annotations
 
-from nerfstudio_template.template_datamanager import (
+from nerfstudio_template.my_datamanager import (
     TemplateDataManagerConfig,
 )
-from nerfstudio_template.template_model import TemplateModelConfig
-from nerfstudio_template.template_pipeline import (
+from nerfstudio.my_model import TemplateModelConfig
+from nerfstudio.my_pipeline import (
     TemplatePipelineConfig,
 )
 

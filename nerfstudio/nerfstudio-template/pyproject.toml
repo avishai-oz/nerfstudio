@@ -10,4 +10,4 @@ dependencies = ["nerfstudio==0.3.2"]
 include = ["nerfstudio_template*"]
 
 [project.entry-points.'nerfstudio.method_configs']
-nerfstudio-template = 'nerfstudio_template.template_config:template_method'
+nerfstudio-template = 'nerfstudio_template.my_config:my_method'
