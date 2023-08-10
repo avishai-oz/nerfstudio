@@ -195,9 +195,7 @@ class NerfactoModel(Model):
         # Samplers
         def update_schedule(step):
             return np.clip(
-                np.interp(step, [0, self.config.proposal_warmup], [0, self.config.proposal_update_every]),
-                1,
-                self.config.proposal_update_every,
+                np.interp(step, [0, self.config.proposal_warmup], [0, self.config.proposal_update_every]), 1, self.config.proposal_update_every,
             )
 
         # Change proposal network initial sampler if uniform

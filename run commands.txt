@@ -29,7 +29,7 @@ ns-viewer --load-config outputs\processed\nerfacto\2023-08-08_212251config.yml
 
 
 
-ns-train nerfstudio-template --data data\all\processed --pipeline.datamanager.images-on-gpu True
+ns-train nerfstudio-template --data C:\Users\MixedRealityLab\nerfstudio\data\all\processed --pipeline.datamanager.images-on-gpu True
 set HOME=C:\Users\MixedRealityLab\nerfstudio
 
 
